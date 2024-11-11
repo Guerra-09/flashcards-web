@@ -1,0 +1,29 @@
+
+<div class="authView text-light">
+    <h1> Auth view </h1>
+    
+    <form action="">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Email: </label>
+            </div>
+            <div class="col-auto">
+                <input type="email" id="inputEmail" #inputEmail class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+
+        <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+            <input type="password" id="inputPassword" #inputPassword class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        </div>
+
+    </form>
+    <button (click)="login(inputEmail.value, inputPassword.value)" class="btn btn-primary">  Iniciar sesion </button>
+</div>
+
+    
+  
