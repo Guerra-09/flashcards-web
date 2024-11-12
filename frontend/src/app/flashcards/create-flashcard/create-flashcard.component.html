@@ -1,0 +1,24 @@
+<div style="justify-items: center;">
+
+    <div class="my-4 row" style="display: flex;">
+        <div class="col col-lg-2">
+            <button routerLink="/flashcardFolder" class="btn btn-primary"> Back </button>
+        </div>
+        <div class="col col-lg-9">
+            <input type="text" class="folderNameInput form-control" #folderName>
+        </div>
+        
+    </div>
+
+
+
+    <textarea class="cardInput" type="text" placeholder="Question" id="questionInput" #questionInput></textarea>
+    <textarea class="cardInput" type="text" placeholder="Answer" id="answerInput" #answerInput></textarea>
+    
+
+
+    <div class="d-flex justify-content-center my-4">
+        <button (click)="createDirectory(folderName.value)" class="btn btn-success btn-lg mx-2">Save</button>
+        <button (click)="addFlashCard(questionInput.value, answerInput.value)" class="btn btn-primary btn-lg mx-2">Add another flashcard</button>
+    </div>
+</div>

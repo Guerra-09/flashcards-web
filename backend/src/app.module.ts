@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
+import { FlashcardModule } from './flashcard/flashcard.module';
+import { FlashcardFolderModule } from './flashcard-folder/flashcard-folder.module';
 
 @Module({
   imports: [
@@ -18,7 +20,9 @@ import { AuthModule } from './auth/auth.module';
       autoLoadEntities: true,
       synchronize: true,
     }),
-    AuthModule
+    AuthModule,
+    FlashcardModule,
+    FlashcardFolderModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,0 +1,20 @@
+<div class="container-md">
+    
+    <div class="my-2" style="display: flex; justify-content: space-between;">
+        <h1>My flashcards Folders</h1>
+        <button routerLink="/flashcards/create" class="btn btn-primary my-2">Create</button>
+    </div>
+    
+
+    @for (folder of folders; track folder.id) {
+        <a (click)="directoryFlashcards(folder.id)">
+            <div id="item" class="card my-4">
+                <div class="card-body">
+                   {{folder.name}}
+                </div>
+            </div>
+        </a>
+        
+
+    }
+</div>
